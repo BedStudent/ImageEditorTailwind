@@ -12,7 +12,7 @@ const Login = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h3>Login</h3>
+      <h3 className="text-3xl text-center text-gray-200">Login</h3>
       <div className="form-group">
         <input
           type="email"
@@ -37,15 +37,18 @@ const Login = () => {
           <span className="formName">Password</span>
         </label>
       </div>
-
-      <div className="d-grid col-8 mx-auto mt-4">
-        <button className="btn btn-primary">Login</button>
+      <div className="flex flex-col">
+        <button className="mt-3 mx-14 px-2 py-2 bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 rounded-lg">
+          Login
+        </button>
       </div>
-      <Link to={"/forgotPassword"} className="link-forgotPassword">
-        <h6 className="name-forgotPassword">Forgot Password?</h6>
+      <Link to={"/auth/forgotPassword"} className="link-forgotPassword">
+        <h6 className="m-3 text-gray-300">Forgot Password?</h6>
       </Link>
 
-      <h1 className="text-red-600"> fffff</h1>
+      <Link to={"/auth/register"} className="link-forgotPassword">
+        <h6 className="m-3 text-gray-300">Don't have an account?</h6>
+      </Link>
     </form>
   );
 };

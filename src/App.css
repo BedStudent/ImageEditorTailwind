@@ -1,32 +1,7 @@
-.navbar-light {
-  background-color: #ffffff;
-  box-shadow: 0px 14px 80px;
-}
-h1,
-h2,
-h3 {
-  color: white;
-  text-align: center;
-}
-
-#PicEditor {
-  width: 100%;
-  height: 100%;
-}
-
 .form-inner {
-  width: 400px;
-  margin: auto;
-  background-color: rgba(138, 131, 138, 0.274);
-  box-shadow: -1px 18px 17px -8px rgba(166, 31, 166, 0.78);
   padding: 20px 50px 40px 50px;
   border-radius: 15px;
   border: black 2px solid !important;
-}
-
-.formBody {
-  display: flex;
-  justify-content: center;
 }
 
 /*login/register form style start*/
@@ -95,47 +70,10 @@ h3 {
   transform: translateX(0%);
 }
 
-.btn {
-  background: #0e26c0;
-}
-
 /*login/register form style end*/
 
 /*forgot password style start*/
 
 .name-forgotPassword {
   color: rgb(54, 216, 244);
-  margin: 10px;
-  font-size: 0.9rem;
 }
-
-.link-forgotPassword {
-  text-decoration-line: none;
-}
-.name-forgotPassword {
-  position: relative;
-}
-.name-forgotPassword::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 40%;
-  height: 0.1em;
-  background-color: hotpink;
-  opacity: 0;
-  transition: opacity 300ms, transform 300ms;
-}
-
-.name-forgotPassword:hover::after,
-.name-forgotPassword:focus::after {
-  opacity: 1;
-  transform: translate3d(0, 0.2em, 0);
-}
-
-.name-forgotPassword:hover::after,
-.name-forgotPassword:focus::after {
-  transform: scale(1);
-}
-
-/* forgot password style end */

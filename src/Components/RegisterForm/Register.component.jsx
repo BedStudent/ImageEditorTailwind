@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -14,12 +14,12 @@ const Register = () => {
     console.log(email);
     console.log(password);
     console.log(confirmPassword);
-    navigate("/login");
+    navigate("/auth/login");
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <h3 className="m-4">Sign up</h3>
+      <h3 className="text-3xl text-center text-gray-200">Sign up</h3>
       <div className="form-group">
         <input
           type="text"
@@ -72,8 +72,14 @@ const Register = () => {
         </label>
       </div>
 
-      <div className="d-grid col-8 mx-auto mt-4">
-        <button className="btn btn-primary">Register</button>
+      <Link to={"/auth/login"} className="link-forgotPassword">
+        <h6 className="m-3 text-gray-300">Have account?</h6>
+      </Link>
+
+      <div className="flex flex-col">
+        <button className="mt-3 mx-14 px-2 py-2 bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 rounded-lg">
+          Register
+        </button>
       </div>
     </form>
   );
