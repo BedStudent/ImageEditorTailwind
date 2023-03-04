@@ -43,11 +43,11 @@ const Login = () => {
         </button>
       </div>
       <Link to={"/auth/forgotPassword"} className="link-forgotPassword">
-        <h6 className="m-3 text-gray-300">Forgot Password?</h6>
+        <h6 className="m-3 text-gray-300 text-sm">Forgot Password?</h6>
       </Link>
 
       <Link to={"/auth/register"} className="link-forgotPassword">
-        <h6 className="m-3 text-gray-300">Don't have an account?</h6>
+        <h6 className="m-3 text-gray-300 text-sm">Don't have an account?</h6>
       </Link>
     </form>
   );

@@ -6,7 +6,12 @@ module.exports = {
   ],
 
   theme: {
-    extend: {},
+    extend: {
+      width: {
+        "12/13": "95%",
+        "11/12": "90%",
+      },
+    },
   },
   plugins: [require("flowbite/plugin")],
 };

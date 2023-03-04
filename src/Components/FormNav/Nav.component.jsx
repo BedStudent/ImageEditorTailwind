@@ -4,7 +4,7 @@ import Login from "../LoginForm/Login.component";
 import Register from "../RegisterForm/Register.component";
 import ForgotPasswordForm from "../ForgotPassword/ForgotPassword";
 import { Form } from "../FormDashboard";
-import Home from "../FormHome/Home.components";
+
 import FormModal from "../PopOver/ModalForm";
 import { useState } from "react";
 export const FormNav = () => {
@@ -40,7 +40,7 @@ export const FormNav = () => {
         <div className="m-3 ">
           <button
             onClick={() => setIsOpen(true)}
-            className="p-2 w-36 text-gray-200 rounded-full hover:bg-violet-700"
+            className="p-2 w-36 text-gray-200 rounded-full hover:bg-violet-700 border border-purple-600"
           >
             <Link to={"/auth/login"}>Login</Link>
           </button>

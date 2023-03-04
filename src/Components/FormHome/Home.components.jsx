@@ -5,7 +5,7 @@ import FilerobotImageEditor, {
 
 const Home = () => {
   return (
-    <div id="PicEditor">
+    <div className="w-auto md:h-screen lg:h-screen p-2">
       <FilerobotImageEditor
         source="https://scaleflex.airstore.io/demo/stephen-walker-unsplash.jpg"
         onSave={(editedImageObject, designState) =>
