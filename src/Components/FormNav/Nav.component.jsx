@@ -4,9 +4,12 @@ import Login from "../LoginForm/Login.component";
 import Register from "../RegisterForm/Register.component";
 import ForgotPasswordForm from "../ForgotPassword/ForgotPassword";
 import { Form } from "../FormDashboard";
+import Home from "../FormHome/Home.components";
 
 import FormModal from "../PopOver/ModalForm";
 import { useState } from "react";
+import { PayPlans } from "../PremiumComponent/PremiumPlans";
+import SubscriptioModal from "../PopOver/ModelSubscription";
 export const FormNav = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -38,12 +41,14 @@ export const FormNav = () => {
     <div className=" sm:visible bg-gray-900">
       <div className="flex justify-end ">
         <div className="m-3 ">
-          <button
-            onClick={() => setIsOpen(true)}
-            className="p-2 w-36 text-gray-200 rounded-full hover:bg-violet-700 border border-purple-600"
-          >
-            <Link to={"/auth/login"}>Login</Link>
-          </button>
+          <Link to={"/auth/login"}>
+            <button
+              onClick={() => setIsOpen(true)}
+              className="p-2 w-36 text-gray-200 rounded-full hover:bg-violet-700 border border-purple-600"
+            >
+              Login
+            </button>
+          </Link>
 
           <FormModal open={isOpen} onClose={() => setIsOpen(false)}>
             <Routes>
@@ -55,10 +60,21 @@ export const FormNav = () => {
             </Routes>
           </FormModal>
         </div>
+
         <div className="m-3">
-          <button className="p-2 w-36 text-gray-200 rounded-full hover:bg-yellow-300">
-            Premium
-          </button>
+          <Link to={"/plans"}>
+            <button
+              onClick={() => setIsOpen(true)}
+              className="p-2 w-36 text-gray-200 rounded-full hover:bg-yellow-300"
+            >
+              Premium
+            </button>
+          </Link>
+          <SubscriptioModal open={isOpen} onClose={() => setIsOpen(false)}>
+            <Routes>
+              <Route path="/plans" element={<PayPlans />} />
+            </Routes>
+          </SubscriptioModal>
         </div>
       </div>
     </div>

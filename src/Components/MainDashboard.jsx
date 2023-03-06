@@ -66,7 +66,7 @@ export const Testavimas = () => {
           open ? "sm:w-4/5" : "sm:w-12/13"
         } ${open ? "lg:w-11/12" : "lg:w-full"} p-1 `}
       >
-        <div class="w-auto md:h-screen lg:h-screen border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 ">
+        <div className="w-auto md:h-screen lg:h-screen border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 ">
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
