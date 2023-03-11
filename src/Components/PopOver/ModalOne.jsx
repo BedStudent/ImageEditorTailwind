@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Modal from "./MainModal";
 import { Form } from "../FormDashboard";
+import Home from "../FormHome/Home.components";
 import Login from "../LoginForm/Login.component";
 import Register from "../RegisterForm/Register.component";
 import ForgotPasswordForm from "../ForgotPassword/ForgotPassword";

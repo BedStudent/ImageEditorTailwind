@@ -13,13 +13,13 @@ export const Testavimas = () => {
     { title: "Home", Link: "/", src: "Chart_fill" },
     { title: "Templates", src: "Folder" },
     { title: "Pricing", src: "Setting" },
-    { title: "Login", src: "Setting", display: "Form" },
+    { title: "Login", src: "Setting", Link: "/auth/login" },
   ];
   return (
     <div className="flex ">
       <div
         className={` ${
-          open ? "w-44" : "w-0 "
+          open ? "w-48" : "w-0 "
         }  md:h-screen lg:h-screen bg-gray-700  p-5  pt-8 relative duration-300`}
       >
         <img
@@ -62,9 +62,9 @@ export const Testavimas = () => {
         </ul>
       </div>
       <div
-        className={` ${open ? "w-8/12" : "w-11/12"} ${
+        className={` ${open ? "w-3/5" : "w-11/12"} ${
           open ? "sm:w-4/5" : "sm:w-12/13"
-        } ${open ? "lg:w-11/12" : "lg:w-full"} p-1 `}
+        } ${open ? "lg:w-11.5/12" : "lg:w-full"} p-1 `}
       >
         <div className="w-auto md:h-screen lg:h-screen border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 ">
           <Routes>
