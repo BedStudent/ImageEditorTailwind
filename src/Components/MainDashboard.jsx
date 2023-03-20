@@ -13,7 +13,7 @@ export const Testavimas = () => {
     { title: "Home", Link: "/", src: "Chart_fill" },
     { title: "Templates", src: "Folder" },
     { title: "Pricing", src: "Setting" },
-    { title: "Login", src: "Setting", Link: "/auth/login" },
+    { title: "SomeElse", src: "Setting", Link: "/auth/login" },
   ];
   return (
     <div className="flex ">

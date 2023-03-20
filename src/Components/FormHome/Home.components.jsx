@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className="w-auto md:h-screen lg:h-screen p-2">
       <FilerobotImageEditor
-        source="https://scaleflex.airstore.io/demo/stephen-walker-unsplash.jpg"
+        source="./images/FormFoto2.jpg"
         onSave={(editedImageObject, designState) =>
           console.log("saved", editedImageObject, designState)
         }
