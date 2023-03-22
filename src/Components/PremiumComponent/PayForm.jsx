@@ -14,15 +14,12 @@ const PayForm = () => {
     console.log(SecondName);
     console.log(CardNumber);
     console.log(ZipCode);
-    navigate("/");
+    navigate("/confirm/cheers");
   };
 
   return (
-    <form
-      className="rounded-lg p-4 border-2 border-solid border-gray-900"
-      onSubmit={handleSubmit}
-    >
-      <h3 className="text-3xl text-center text-gray-200">Check Out</h3>
+    <form onSubmit={handleSubmit}>
+      <h3 className="text-3xl text-center text-gray-200">Checkout</h3>
       <div className="form-group">
         <input
           type="text"
@@ -31,11 +28,10 @@ const PayForm = () => {
           required
           onChange={(event) => setFirstName(event.target.value)}
         />
-        <label htmlFor="text" className="label-inputName">
-          <span className="formName">FirstName</span>
+        <label className="label-inputName">
+          <span className="formName">First name</span>
         </label>
       </div>
-
       <div className="form-group">
         <input
           type="text"
@@ -44,24 +40,10 @@ const PayForm = () => {
           required
           onChange={(event) => setSecondName(event.target.value)}
         />
-        <label htmlFor="text" className="label-inputName">
-          <span className="formName">SecondName</span>
+        <label className="label-inputName">
+          <span className="formName">Second Name</span>
         </label>
       </div>
-
-      <div className="form-group">
-        <input
-          type="text"
-          className="form-control"
-          value={CardNumber}
-          required
-          onChange={(event) => setCardNumber(event.target.value)}
-        />
-        <label htmlFor="text" className="label-inputName">
-          <span className="formName">Card Number</span>
-        </label>
-      </div>
-
       <div className="form-group">
         <input
           type="text"
@@ -70,17 +52,26 @@ const PayForm = () => {
           required
           onChange={(event) => setZipCode(event.target.value)}
         />
-        <label htmlFor="text" className="label-inputName">
+        <label className="label-inputName">
           <span className="formName">Zip Code</span>
         </label>
       </div>
-
-      <div className="flex justify-center">
-        <Link to={""} /*someBank i guess */>
-          <button className="mt-3 mx-14 px-2 py-2 w-36 bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 rounded-lg">
-            Proceed
-          </button>
-        </Link>
+      <div className="form-group">
+        <input
+          type="text"
+          className="form-control"
+          value={CardNumber}
+          required
+          onChange={(event) => setCardNumber(event.target.value)}
+        />
+        <label className="label-inputName">
+          <span className="formName">Card Number</span>
+        </label>
+      </div>
+      <div className="flex flex-col">
+        <button className="mt-3 mx-20 w-44 px-2 py-2 bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 rounded-lg">
+          Proceed
+        </button>
       </div>
     </form>
   );

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export const PayPlans = () => {
   return (
-    <div className=" p-6 mx-auto  text-center text-gray-900 shadow-[-1px_18px_17px_-8px_rgba(166,31,166,0.78)] bg-fuchsia-900/30 rounded-lg border-2 border-gray-900 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+    <div className="p-3 text-center">
       <h3 className="mb-4 text-2xl text-sky-200 font-semibold">Premium</h3>
       <p className="font-light text-cyan-400 sm:text-lg dark:text-gray-400">
         Buy once, use forever
